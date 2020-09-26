@@ -1,12 +1,3 @@
-.navbar{
-    font-weight: 300;
-    .navbar-brand {
-        &__title {
-            font-weight: 500;
-        }
-    }
-}
-
 .header {
     height: 100%;
     margin-top: 72px;
@@ -15,7 +6,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    top: 0; left: 0;
     z-index: 1;
 }
 
