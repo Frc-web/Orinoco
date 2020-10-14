@@ -1,74 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="https://kit.fontawesome.com/2af2efc0d4.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-  <title>Oricamera - accueil</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script src="https://kit.fontawesome.com/2af2efc0d4.js" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <title>Oricamera - accueil</title>
 </head>
 <body>
-  <!--navbar-->
-  <div class="bg-dark fixed-top">
+    <!--navbar-->
+    <div class="bg-dark fixed-top">
+        <div class="container">
+            <div class="row">
+                <nav class="col navbar navbar-expand-lg navbar-dark my-2">
+                    <a class="navbar-brand" href="index.html">
+                        <i class="fas fa-camera-retro fa-lg" alt="Info Logo"></i>
+                        <span class="ml-1">Oricamera</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="produit.html">Articles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="panier.html">Panier</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--header-->
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="container text-white text-center">
+            <h1 class="pt-5">Le numéro 1<br>
+                <span class="font-weight-light">des ventes d'appareils photo anciens !</span></h1>
+        </div>
+    </header>
+    <!--main-->
     <div class="container">
-      <div class="row">
-        <nav class="col navbar navbar-expand-lg navbar-dark my-2">
-          <a class="navbar-brand" href="index.html">
-            <i class="fas fa-camera-retro fa-lg" alt="Info Logo"></i>
-            <span class="ml-1">Oricamera</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navbarContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="produit.html">Articles</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="panier.html">Panier</a>
-              </li>
+        <p class="jumbotron jumbotron__css">Vous souhaitez faire l’acquisition d’un appareil photo argentique ? Vous recherchez la perle rare ? Un modèle en particulier ? Vous êtes au bon endroit. Spécialiste du matériel photographique et cinématographique ancien et de collection depuis 1992, tous nos appareils photo sont révisés, nettoyés et garantis. Que ce soit pour votre collection, pour débuter ou pour faire un cadeau, n’hésitez pas à nous contacter, nous nous ferons un plaisir de vous conseiller.</p>
+        <h2 class="title">Notre selection</h2>
+        <div class="row" id="index-cameras"></div>
+    </div>
+    <!--footer-->
+    <div class="bg-dark mt-5">
+        <div class="container">
+            <ul class="nav pt-4 pb-4 list-inline d-flex justify-content-between text-center">
+                <li class="list-inline-item text-light"><a href="#">À propos</a></li>
+                <li class="list-inline-item text-light"><a href="#">Vie privée</a></li>
+                <li class="list-inline-item text-light"><a href="#">Conditions d'utilisations</a></li>
             </ul>
-          </div>
-        </nav>
-      </div>
+        </div>
     </div>
-  </div>
-  <!--header-->
-  <header class="header">
-    <div class="overlay"></div>
-    <div class="container text-white text-center">
-      <h1 class="pt-5">Le numéro 1<br>
-        <span class="font-weight-light">des ventes d'appareils photo anciens !</span></h1>
-    </div>
-  </header>
-  <!--main-->
-  <div class="container">
-    <p class="jumbotron">Vous souhaitez faire l’acquisition d’un appareil photo argentique ? Vous recherchez la perle rare ? Un modèle en particulier ? Vous êtes au bon endroit. Spécialiste du matériel photographique et cinématographique ancien et de collection depuis 1992, tous nos appareils photo sont révisés, nettoyés et garantis. Que ce soit pour votre collection, pour débuter ou pour faire un cadeau, n’hésitez pas à nous contacter, nous nous ferons un plaisir de vous conseiller.</p>
-    <h2 class="title__coup-de-coeur">Notre selection</h2>
-    <div class="row" id="camera"></div>
-  </div>
-  <!--footer-->
-  <div class="bg-dark mt-5">
-    <div class="container">
-      <ul class="nav pt-4 pb-4 list-inline d-flex justify-content-between text-center">
-        <li class="list-inline-item text-light"><a href="#">À propos</a></li>
-        <li class="list-inline-item text-light"><a href="#">Vie privée</a></li>
-        <li class="list-inline-item text-light"><a href="#">Conditions d'utilisations</a></li>
-      </ul>
-    </div>
-  </div>
+
   
-  
-  
-  <script type="text/javascript" src="request.js"></script>
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="request.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

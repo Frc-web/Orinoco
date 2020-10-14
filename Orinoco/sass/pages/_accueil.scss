@@ -1,23 +1,23 @@
-.jumbotron {
-    background-color: rgb(180, 157, 118);
+.jumbotron__css {
+    background-color: $color-bg-elements;
     margin-top: 6rem;
     box-shadow: 1px 1px 7px rgb(61, 59, 59);
     border-radius: 15px;
 }
 
-.card {
+.card__css {
     overflow: hidden;
     box-shadow: 1px 1px 7px rgb(61, 59, 59);
     border-radius: 15px;
     border: none;
-    &__produit {
-        height: 350px;
-    }
 }
 
-.title__coup-de-coeur {
+.title {
     text-align: center;
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
     margin-top: 4rem;
+    &__choix {
+        margin-bottom: 4rem;
+    }
 }

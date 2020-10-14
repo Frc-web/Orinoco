@@ -1,4 +1,15 @@
-#lense {
+.container__formulaire {
     margin-top: 100px;
-
 }
+
+.invalid-feedback {
+    color: red;
+    &::before {
+        border: 1px solid red;
+    }
+}
+
+
+
+
+    
