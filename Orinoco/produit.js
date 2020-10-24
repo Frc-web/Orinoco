@@ -44,13 +44,15 @@
             document.getElementById("addCam").addEventListener("click", function(e){
                 e.preventDefault();
                 let panier = JSON.parse(localStorage.getItem("panier")) ?? [];
+                console.log(panier);
                 let obj = {
-                    _id: contentId, /* --?-- */
+                    id: contentId, /* ou respCams._id */
                     name: respCams.name,
                     price: respCams.price / 100,
                     description: respCams.description
                 };
                 panier.push(obj); /* --?--*/
+                console.log(panier);
                 localStorage.setItem("panier", JSON.stringify(panier));
                 // console.log("test"); /* pour tester le bouton */
                 window.location.href="panier.html";

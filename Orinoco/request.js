@@ -1,10 +1,10 @@
 (function() {
     'use strict';
 
-    let xhrAllCameras = new XMLHttpRequest();
+    let xhrIndexCameras = new XMLHttpRequest();
     let cameras = document.getElementById("index-cameras");
-    xhrAllCameras.onreadystatechange = function() {
-        // console.log(this); /* pour voir l'état de la requête */
+    xhrIndexCameras.onreadystatechange = function() {
+        console.log(this); /* pour voir l'état de la requête ou console.log(xhrIndexCameras)*/
         if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
             let respCams = JSON.parse(this.responseText);
             for(let i = 0; i < respCams.length; i++) {
@@ -23,7 +23,7 @@
             console.log(respCams); /* pour voir la réponse */
         }
     };
-    xhrAllCameras.open("GET", "http://localhost:3000/api/cameras");
-    xhrAllCameras.send();
+    xhrIndexCameras.open("GET", "http://localhost:3000/api/cameras");
+    xhrIndexCameras.send();
 
 })(); /*()appel de la fonction*/

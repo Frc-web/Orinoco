@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <script src="https://kit.fontawesome.com/2af2efc0d4.js" crossorigin="anonymous"></script> -->
+    <script src="https://kit.fontawesome.com/2af2efc0d4.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <title>Oricamera - panier</title>
 </head>
@@ -31,6 +31,9 @@
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="panier.html">Panier</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="confirmation.html">Confirmation</a>
                             </li>
                         </ul>
                     </div>
@@ -77,29 +80,10 @@
                     <input type="text" class="form-control" id="city" required>
                     <div class="invalid-feedback">Inscrivez le nom de votre ville</div>
                 </div>
-                <div class="form-group col-md-6">
-                    <label for="state">Etat</label>
-                    <select id="state" class="form-control">
-                    <option selected>France</option>
-                    <option>Allemagne</option>
-                    <option>Angleterre</option>
-                    <option>Belgique</option>
-                    <option>Espagne</option>
-                    <option>Italie</option>
-                    <option>Pays-Bas</option>
-                    <option>Suisse</option>
-                    </select>
-                    <div class="invalid-feedback">Choisissez le nom de votre pays</div>
-                </div>
             </div>
-            <button id="sendCommand" type="submit" class="btn btn-danger mt-3">Valider</button>
+            <button type="submit" class="btn btn-danger mt-3" id="sendCommand">Valider</button>
         </form>
-
-        
-
     </div>
-
-    
     <!--footer-->
     <div class="bg-dark mt-5">
         <div class="container">

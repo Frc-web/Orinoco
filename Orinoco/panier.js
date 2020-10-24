@@ -6,7 +6,7 @@
     let recupPanier = document.getElementById("recup");
         
     for(let i = 0; i < monPanier.length; i++) {
-        productId.push(monPanier[i]._id)
+        productId.push(monPanier[i].id)
         recupPanier.innerHTML += 
         `<div class="col-12 col-md-8 mt-5">
             <div class="card card__css">
@@ -20,21 +20,47 @@
     };
 
 
-         
-    let clicButon = function (e) {
+    /*let clicButon = function (e) {
         e.preventDefault();
-        let xhrPanier = new XMLHttpRequest();
+        
+    };
+        let buttonSend = document.getElementById("sendCommand");
+        buttonSend.addEventListener("click", clicButon);*/
+
+        
+        
+        
+        
+
+
+
+    // pour désactiver la soumission de formulaires s'il y a des champs non valides
+    window.addEventListener('load', function() {
+        // Récupérez tous les formulaires auxquels nous voulons appliquer des styles de validation Bootstrap personnalisés
+        let forms = document.getElementsByClassName('needs-validation');
+        // Bouclez-les et empêchez la soumission
+        let validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                } else {
+                    event.preventDefault();
+                    let xhrPanier = new XMLHttpRequest();
         xhrPanier.onreadystatechange = function() {
             // console.log(this); /* pour voir l'état de la requête */
-            if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                let respCams = JSON.parse(this.responseText);
+            if (this.readyState == XMLHttpRequest.DONE && this.status == 201) {
+                let resultCommande = JSON.parse(this.responseText);
+                // confirmation
+            let commandeNumber = resultCommande.orderId;
+            localStorage.setItem("confirmForm", commandeNumber);
+            window.location.href="confirmation.html";
                 console.log(respCams);
             }
         };
       
         xhrPanier.open("POST", "http://localhost:3000/api/cameras/order");
-        let firstName = document.getElementById("first-name").value;
         let lastName = document.getElementById("last-name").value;
+        let firstName = document.getElementById("first-name").value;
         let email = document.getElementById("email").value;
         let address = document.getElementById("address").value;
         let city = document.getElementById("city").value;
@@ -49,23 +75,9 @@
             products: productId
         };
         xhrPanier.setRequestHeader("Content-Type", "application/json"); 
+        // on dit qu'on envoie du JSON
         xhrPanier.send(JSON.stringify(data));
-    };
-        let buttonSend = document.getElementById("sendCommand");
-        buttonSend.addEventListener("click", clicButon);
-
-
-
-
-    // pour désactiver la soumission de formulaires s'il y a des champs non valides
-    window.addEventListener('load', function() {
-        // Récupérez tous les formulaires auxquels nous voulons appliquer des styles de validation Bootstrap personnalisés
-        let forms = document.getElementsByClassName('needs-validation');
-        // Bouclez-les et empêchez la soumission
-        let validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
+        // transforme notre objet en chaine de caractère
                 }
                 form.classList.add('was-validated');
             });
