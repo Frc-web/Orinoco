@@ -22,10 +22,5 @@
         console.log(error);
     });
         
-           
-
-        
- 
-
 })() /*()appel de la fonction*/
 

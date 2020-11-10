@@ -5,6 +5,10 @@
     if (monPanier == null || monPanier.length == 0){
         let cacheForm = document.getElementById("commandeForm");
         cacheForm.classList.add("cache-formulaire"); 
+        let panierVide = document.getElementById("panier-vide"); /* --------------- ? --------------------*/
+        panierVide.innerHTML = `<p class="jumbotron jumbotron__panier-css text-center">
+                                    Votre panier est vide !
+                                </p>`
     } else {
         let productId = [];
         let recupPanier = document.getElementById("recup");
@@ -37,7 +41,21 @@
                 } else {
                     event.preventDefault();
                     
-                    
+                    let lastName = document.getElementById("last-name").value;
+                    let firstName = document.getElementById("first-name").value;
+                    let email = document.getElementById("email").value;
+                    let address = document.getElementById("address").value;
+                    let city = document.getElementById("city").value;
+                    let objData = {
+                        contact: 
+                            {lastName: lastName,
+                            firstName: firstName,
+                            email: email,
+                            address: address,
+                            city: city
+                        },
+                        products: productId
+                    };
                     request("http://localhost:3000/api/cameras/order", "POST", (JSON.stringify(objData))).then(respCamsPanier => {
                         console.log(respCamsPanier); /* pour voir la réponse */
                         // confirmation
@@ -49,26 +67,11 @@
                         window.location.href="confirmation.html";
                         console.log(resultOrder);
                         
-                        let lastName = document.getElementById("last-name").value;
-                        let firstName = document.getElementById("first-name").value;
-                        let email = document.getElementById("email").value;
-                        let address = document.getElementById("address").value;
-                        let city = document.getElementById("city").value;
-                        let objData = {
-                            contact: 
-                                {lastName: lastName,
-                                firstName: firstName,
-                                email: email,
-                                address: address,
-                                city: city
-                            },
-                            products: productId
-                        };
-                        xhrPanier.setRequestHeader("Content-Type", "application/json"); 
-                        /* on dit qu'on envoie du JSON */
+                    
+ 
                     }).catch(error => {
                         console.log(error);
-                    });
+                    })
                 }
                 // quand on a soumit le formulaire en appuyant sur le bouton, même si il est mal remplit
                 form.classList.add('was-validated'); 

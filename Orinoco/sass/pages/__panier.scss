@@ -4,13 +4,21 @@
 
 .invalid-feedback {
     color: red;
-    &::before {
+        
         border: 1px solid red;
-    }
+    
 }
 
 .cache-formulaire {
     display: none;
+}
+
+.jumbotron__panier-css {
+    background-color: $color-bg-elements;
+    margin-top: 6rem;
+    box-shadow: 1px 1px 7px rgb(61, 59, 59);
+    border-radius: 15px;
+    font-size: 40px;
 }
 
 

@@ -7816,7 +7816,7 @@ html, body {
   height: 100%;
   z-index: -1; }
 
-.jumbotron__css {
+.jumbotron__accueil-css {
   background-color: #b49d76;
   margin-top: 6rem;
   box-shadow: 1px 1px 7px #3d3b3b;
@@ -7840,17 +7840,24 @@ html, body {
   margin-top: 10rem; }
 
 .card__css__produit {
-  height: 350px; }
+  height: 350px;
+  margin-bottom: 100px; }
 
 .container__formulaire {
   margin-top: 100px; }
 
 .invalid-feedback {
-  color: red; }
-  .invalid-feedback::before {
-    border: 1px solid red; }
+  color: red;
+  border: 1px solid red; }
 
 .cache-formulaire {
   display: none; }
+
+.jumbotron__panier-css {
+  background-color: #b49d76;
+  margin-top: 6rem;
+  box-shadow: 1px 1px 7px #3d3b3b;
+  border-radius: 15px;
+  font-size: 40px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -7,6 +7,9 @@
     let cameraImg = document.getElementById("produit-img");
     let cameraDescription = document.getElementById("produit-description");
 
+    if (contentId == null) {            
+        location.href = "index.html";    
+    }
     
     request("http://localhost:3000/api/cameras/" + contentId).then(respCamsProduit => {
         console.log(respCamsProduit); /* pour voir la réponse */
@@ -41,7 +44,13 @@
             document.getElementById("addCam").addEventListener("click", function(e){
                 e.preventDefault();
                 console.log("test"); /* pour tester le bouton */
-                let panier = JSON.parse(localStorage.getItem("panier")) ?? [];  
+
+                // let panier = JSON.parse(localStorage.getItem("panier")) ?? [];  
+                let panier = [];
+                if (localStorage.getItem("panier")) {
+                    panier = JSON.parse((localStorage.getItem("panier")));
+                }
+                console.log(panier);
                 let objProduit = {
                     id: contentId, /* ou respCams._id */
                     name: respCamsProduit.name,
