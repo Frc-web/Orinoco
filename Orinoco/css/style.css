@@ -8673,7 +8673,7 @@ html, body {
   border-radius: 15px;
   border: none; }
 
-.header {
+.header__css {
   height: 100%;
   margin-top: 72px;
   background-image: url("../pictures/header-paysage.jpg");
@@ -8683,7 +8683,7 @@ html, body {
   position: relative;
   z-index: 1; }
 
-.overlay {
+.overlay__css {
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
   width: 100%;
@@ -8691,7 +8691,7 @@ html, body {
   z-index: -1; }
 
 @media screen and (max-width: 768px) {
-  .header {
+  .header__css {
     background-image: url("../pictures/header-portrait.jpg"); } }
 .jumbotron__accueil-css {
   background-color: #cab694;
