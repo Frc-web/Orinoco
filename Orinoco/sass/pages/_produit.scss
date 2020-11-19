@@ -1,8 +1,30 @@
-.container__produit {
-    margin-top: 10rem;
-}
-
 .card__css__produit {
     height: 350px;
-    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 992px) {
+    .container__produit {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container__produit {
+        width: 570px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container__produit {
+        width: inherit;
+    }
+    .card__css img {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card__css img {
+        height: 250px;
+    }
 }

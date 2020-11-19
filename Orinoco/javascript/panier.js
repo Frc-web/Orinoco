@@ -5,7 +5,7 @@
     if (monPanier == null || monPanier.length == 0){
         let cacheForm = document.getElementById("commandeForm");
         cacheForm.classList.add("cache-formulaire"); 
-        let panierVide = document.getElementById("panier-vide"); /* --------------- ? --------------------*/
+        let panierVide = document.getElementById("panier-vide");
         panierVide.innerHTML = `<p class="jumbotron jumbotron__panier-css text-center">
                                     Votre panier est vide !
                                 </p>`
@@ -32,15 +32,11 @@
         window.addEventListener('load', function() {
             // Récupère tous les formulaires auxquels nous voulons appliquer des styles de validation Bootstrap personnalisés
             let form = document.getElementsByClassName('needs-validation')[0];
-            // Boucle sur eux et empêche la soumission
-            // Loop over them and prevent submission
-          
             form.addEventListener('submit', function(event) {
                 if (form.checkValidity() === false) {
                     event.preventDefault();
                 } else {
                     event.preventDefault();
-                    
                     let lastName = document.getElementById("last-name").value;
                     let firstName = document.getElementById("first-name").value;
                     let email = document.getElementById("email").value;
@@ -57,7 +53,6 @@
                         products: productId
                     };
                     request("http://localhost:3000/api/cameras/order", "POST", (JSON.stringify(objData))).then(respCamsPanier => {
-                        console.log(respCamsPanier); /* pour voir la réponse */
                         // confirmation
                         let orderNumber = respCamsPanier.orderId;
                         localStorage.setItem("confirmForm", orderNumber);
@@ -65,12 +60,9 @@
                         localStorage.setItem("confirmPrice", totalPrice);
                         // ----------------------------------------------------------
                         window.location.href="confirmation.html";
-                        console.log(resultOrder);
                         
-                    
- 
                     }).catch(error => {
-                        console.log(error);
+                        camerasIndexList.innerHTML = "Impossible de récupérer les caméras";
                     })
                 }
                 // quand on a soumit le formulaire en appuyant sur le bouton, même si il est mal remplit
@@ -81,4 +73,4 @@
   
 })() 
 
-// let resultOrder = JSON.parse(this.responseText);
+

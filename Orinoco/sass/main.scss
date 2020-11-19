@@ -1,15 +1,16 @@
 @import "utils/variables";
 @import "utils/variables_overrides";
-@import "utils/mixins";
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "base/base";
 
+@import "components/title";
+@import "components/bouton";
+@import "components/card";
+
 @import "layout/header";
-@import "layout/footer";
-@import "layout/nav";
 
 @import "pages/accueil";
 @import "pages/produit";
-@import "pages/_panier";
+@import "pages/panier";

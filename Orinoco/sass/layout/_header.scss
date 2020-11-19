@@ -1,7 +1,7 @@
 .header {
     height: 100%;
     margin-top: 72px;
-    background-image: url("../pictures/pexels-gabriel-peter-707018.jpg");
+    background-image: url("../pictures/header-paysage.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,6 +12,13 @@
 .overlay {
     background: rgba(0, 0, 0, 0.2);
     position: absolute;
-    width: 100%; height: 100%;
+    width: 100%; 
+    height: 100%;
     z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        background-image: url("../pictures/header-portrait.jpg");
+    }
 }

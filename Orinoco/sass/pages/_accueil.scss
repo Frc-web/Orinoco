@@ -1,23 +1,21 @@
 .jumbotron__accueil-css {
     background-color: $color-bg-elements;
-    margin-top: 6rem;
-    box-shadow: 1px 1px 7px rgb(61, 59, 59);
+    box-shadow: $box-shadow;
     border-radius: 15px;
 }
 
-.card__css {
-    overflow: hidden;
-    box-shadow: 1px 1px 7px rgb(61, 59, 59);
-    border-radius: 15px;
-    border: none;
-}
-
-.title {
-    text-align: center;
-    font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
-    margin-top: 4rem;
-    &__choix {
-        margin-bottom: 4rem;
+.card__css-accueil {
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.03);
     }
+}
+
+.card__css-accueil img {
+    transition: transform 0.3s ease-in-out;
+    filter: sepia(0);
+}
+
+.card__css-accueil:hover img {
+    filter: sepia(75%);
 }

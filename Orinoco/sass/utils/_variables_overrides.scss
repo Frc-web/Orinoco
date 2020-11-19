@@ -1,10 +1,26 @@
-/*-----body-----*/
-$body-bg: rgb(204, 192, 174);
 /*-----links-----*/
 $link-color: white;
-/*-----cards-----*/
+/*-----jumbotron and cards-----*/
 $card-bg: $color-bg-elements;
 /*-----buttons-----*/
-$danger: rgba(126, 104, 71, 0.822);
+$primary:  rgba(158, 132, 92, 0.822);
 $btn-border-radius: 10px;
-
+/*-----color nav and footer-----*/
+$dark: #222222;
+/*-----spacers-----*/
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3),
+    6: ($spacer * 5),
+    7: ($spacer * 7),
+    8: ($spacer * 10)
+  ),
+  $spacers
+);

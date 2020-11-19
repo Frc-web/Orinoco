@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <title>Oricamera - panier</title>
 </head>
+
 <body>
+
     <!--navbar-->
     <div class="bg-dark fixed-top">
         <div class="container">
             <div class="row">
                 <nav class="col navbar navbar-expand-lg navbar-dark my-2">
                     <a class="navbar-brand" href="index.html">
-                        <i class="fas fa-camera-retro fa-lg" alt="Info Logo"></i>
+                        <i class="fas fa-camera-retro fa-lg"></i>
                         <span class="ml-1">Oricamera</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
@@ -35,67 +38,128 @@
             </div>
         </div>
     </div>
+
     <!--panier-->
-    <div class="container container__produit">
-        <h2 class="title">Mon panier</h2>
-        <div class="row justify-content-center" id="recup" id="panier-vide"></div>
-        <div id="panier-vide">
-         </div>
-    </div>
+    <section class="container container__produit">
+        <h2 class="title title__css  display-4 text-center mt-8 mb-6">Mon panier</h2>
+        <div class="row justify-content-center" id="recup"></div>
+        <div id="panier-vide"></div>
+    </section>
+
     <!--formulaire-->
     <div class="container container__formulaire" id="commandeForm">
-        <h2 class="title">Valider ma commande</h2>
+        <h2 class="title title__css  display-4 text-center mt-8 mb-6">Valider ma commande</h2>
         <form class="needs-validation" novalidate> 
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="last-name">Nom</label>
-                    <input type="text" class="form-control input-perso" id="last-name" autofocus required>
-                    <div class="invalid-feedback">Inscrivez votre nom</div>
+                    <input type="text" class="form-control form-control__css" id="last-name" autofocus required>
+                    <div class="invalid-feedback invalid-feedback__css">Inscrivez votre nom !</div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="first-name">Prénom</label>
-                    <input type="text" class="form-control input-perso" id="first-name" required>
-                    <div class="invalid-feedback">Inscrivez votre prénom</div>
+                    <input type="text" class="form-control form-control__css" id="first-name" required>
+                    <div class="invalid-feedback invalid-feedback__css">Inscrivez votre prénom !</div>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control input-perso" id="email" placeholder="nom@exemple.com" required>
-                    <div class="invalid-feedback">Inscrivez votre adresse mail</div>
+                    <input type="email" class="form-control form-control__css" id="email" placeholder="nom@exemple.com" required>
+                    <div class="invalid-feedback invalid-feedback__css">Inscrivez votre adresse mail !</div>
                 </div>
-                <div class="form-group col-6">
+                <div class="form-group col-md-6">
                     <label for="address">Adresse</label>
-                    <input type="text" class="form-control input-perso" id="address" required>
-                    <div class="invalid-feedback">Inscrivez votre adresse</div>
+                    <input type="text" class="form-control form-control__css" id="address" required>
+                    <div class="invalid-feedback invalid-feedback__css">Inscrivez votre adresse !</div>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="city">Ville</label>
-                    <input type="text" class="form-control input-perso" id="city" required>
-                    <div class="invalid-feedback">Inscrivez le nom de votre ville</div>
+                    <input type="text" class="form-control form-control__css" id="city" required>
+                    <div class="invalid-feedback invalid-feedback__css">Inscrivez le nom de votre ville !</div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-danger mt-3" id="sendCommand">Valider</button>
+            <button type="submit" class="btn btn__css btn-primary mt-3" id="sendCommand">Valider</button>
         </form>
     </div>
-    <!--footer-->
-    <div class="bg-dark mt-5 fixed-bottom">
-        <div class="container">
-            <ul class="nav pt-4 pb-4 list-inline d-flex justify-content-between text-center">
-                <li class="list-inline-item text-light"><a href="#">À propos</a></li>
-                <li class="list-inline-item text-light"><a href="#">Vie privée</a></li>
-                <li class="list-inline-item text-light"><a href="#">Conditions d'utilisations</a></li>
-            </ul>
-        </div>
-    </div>
 
-    <script type="text/javascript" src="ajax.js"></script>
-    <script type="text/javascript" src="panier.js"></script>
+   <!-- Footer -->
+   <footer class="bg-dark  text-light mt-8">
+    <div class="container">
+        <div class="row jd-flex justify-content-center justify-content-lg-between py-3">
+            <a href="../Orinoco/pictures/oricamera.jpg"><img src="../Orinoco/pictures/oricamera-mini.jpg"
+                    alt="magasin-orinoco" class="col mt-3 mb-3"></a>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.1516658883834!2d2.307773115673605!3d4883624567928541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f131!3m3!1m2!1s0x47e670480e3f33cf%3A0xa78bbb0459583c8b!2s13%20Rue%20Labrouste%2C%2075015%20Paris!5e0!3m2!1sfr!2sfr!4v160553902757!5m2!1sfr!2sfr"
+                width="400" height="230" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0" class="mt-3 mb-3">
+            </iframe>
+        </div>
+
+        <div class="row mb-5 text-center">
+            <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Produits</h6>
+                <p><a href="#!">Appareils photo</a></p>
+                <p><a href="#!">Caméras</a></p>
+                <p><a href="#!">Objectifs</a></p>
+                <p><a href="#!">Accessoires</a></p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Mes informations</h6>
+                <p><a href="#!">Mon compte</a></p>
+                <p><a href="#!">Détail du compte</a></p>
+                <p><a href="#!">Mes commandes</a></p>
+                <p><a href="#!">Aide</a></p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-4 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fas fa-home mr-3"></i>13 Rue Labrouste, 75015 Paris</p>
+                <a href="mailto:oricamera@gmail.com">
+                    <p><i class="fas fa-envelope mr-3"></i>oricamera@gmail.com</p>
+                </a>
+                <p><i class="fas fa-phone-alt mr-3"></i>01 12 98 54 37</p>
+                <a href="#">
+                    <p><i class="fab fa-opera mr-3"></i>Groupe Orinoco</p>
+                </a>
+            </div>
+        </div>
+
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com" class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <img src="../Orinoco/pictures/facebook.png" alt="facebook" width="30px">
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://twitter.com" class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <img src="../Orinoco/pictures/twitter.png" alt="twitter" width="30px">
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com" class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <img src="../Orinoco/pictures/linkedin.png" alt="linkedin" width="30px">
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.instagram.com" class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <img src="../Orinoco/pictures/instagram.png" alt="instagram" width="30px">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="text-center py-3">
+        <p>Oricamera, Copyright 2020 - <a href="#">Mentions légales</a></p>
+    </div>
+</footer>
+
+    <script src="javascript/ajax.js"></script>
+    <script src="javascript/panier.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
