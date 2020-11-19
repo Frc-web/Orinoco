@@ -17,7 +17,7 @@
             productId.push(monPanier[i].id);
             totalPrice = totalPrice + monPanier[i].price;
             recupPanier.innerHTML += 
-            `<div class="col-12 col-md-8 mt-5">
+            `<div class="col-11 col-lg-8 mt-5">
                 <div class="card card__css">
                     <div class="card-body">
                         <h3 class="card-title h4">${monPanier[i].name}</h3>

@@ -8,7 +8,7 @@
     }
     let recupConfirm = document.getElementById("confirm");
     recupConfirm.innerHTML += 
-    `<div class="col-12 col-md-8 mt-5">
+    `<div class="col-11 col-lg-8 mt-5">
         <div class="card card__css">
             <div class="card-body">Merci pour votre commande n° : <br> <span class="font-weight-bold">${confirmPanier}</span>
             </div>
