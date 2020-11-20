@@ -8693,6 +8693,9 @@ html, body {
 @media screen and (max-width: 768px) {
   .header__css {
     background-image: url("../pictures/header-portrait.jpg"); } }
+.social-icon {
+  width: 30px; }
+
 .jumbotron__accueil-css {
   background-color: #cab694;
   box-shadow: 3px 3px 7px #3d3b3b;
